@@ -16,9 +16,9 @@
 ## Phase 2: Information Leak Fixes
 
 ### 2.1 Chat Anonymization
-- [ ] Hook `live_game_chat.js` to replace sender names
-- [ ] Ensure team chat still works correctly
-- [ ] Test with various chat message types
+- [x] Hook `live_game_chat.js` to replace sender names
+- [x] Ensure team chat still works correctly
+- [x] Test with various chat message types
 
 ### 2.2 Alert Anonymization
 - [ ] Hook `live_game_unit_alert.js` for defeat messages
