@@ -1,6 +1,9 @@
 {
   "identifier": "com.anonywho.mod",
   "context": "server",
+  "dependencies": [
+    "com.pa.domdom.color_chat"
+  ],
   "version": "1.0.0",
   "display_name": "Anonywho",
   "description": "Anonymous mode - hides player names with animal aliases",
