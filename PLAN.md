@@ -60,7 +60,7 @@
 ### 4.3 Compatibility
 - [ ] Test with Legion Expansion
 - [ ] Test with common UI mods
-- [ ] Disable conflicting features (Favourite Colour mod)
+- [x] Disable conflicting features (Favourite Colour mod)
 
 ## Technical Notes
 

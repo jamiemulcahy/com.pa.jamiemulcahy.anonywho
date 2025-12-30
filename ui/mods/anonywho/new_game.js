@@ -88,4 +88,10 @@
         wrapSlotCommanders();
         model.armies.subscribe(wrapSlotCommanders);
     });
+
+    // Disable the "Favourite Colour" mod to prevent color conflicts
+    Object.defineProperty(model, 'dFavouriteColour_enabled', {
+        value: false,
+        writable: false
+    });
 })();
