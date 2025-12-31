@@ -61,12 +61,12 @@ Run the **"Sync mod to PA"** task (Ctrl+Shift+B or Terminal → Run Task) to cop
 
 This mod combines and improves upon:
 
-- **[Masquerade](https://forums.uberent.com/threads/masquerade.72838/)** by N30N
+- **Masquerade** by N30N - [Forum](https://forums.uberent.com/threads/masquerade.72838/)
   - Random color assignment from curated palette
   - Chat anonymization
   - Faction-based commander selection
 
-- **[Anonymous Army Mod](https://forums.planetaryannihilation.com/threads/anonymous-army-mod.73302/)** by Kamesuta (Team Fruit)
+- **Anonymous Army Mod** by Kamesuta (Team Fruit) - [GitHub](https://github.com/Team-Fruit/PA-Anonymous-Mod) | [Forum](https://forums.planetaryannihilation.com/threads/anonymous-army-mod.73302/)
   - Animal alias naming system (74 animals)
   - Hash-based player shuffling
   - Devmode/sandbox anonymization
