@@ -86,6 +86,9 @@
     $(document).ready(function () {
         injectCommanderHidingCSS();
 
+        // Post notification about anonymization to lobby chat
+        model.localChatMessage('Anonywho', 'Player names, colours, and commanders have been anonymised.');
+
         var originalHandler = handlers.players;
         handlers.players = function (payload, force) {
             originalHandler.apply(handlers, arguments);
