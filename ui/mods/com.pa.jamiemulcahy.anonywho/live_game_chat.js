@@ -2,17 +2,20 @@
     // Player name to ID mapping, built from player data
     var playerNameToId = {};
 
+    // Build mapping from playerData structure (parallel arrays: names[], ids[])
+    function buildMappingFromPlayerData(playerData) {
+        if (playerData && playerData.names && playerData.ids) {
+            playerNameToId = {};
+            for (var i = 0; i < playerData.names.length; i++) {
+                playerNameToId[playerData.names[i]] = playerData.ids[i];
+            }
+        }
+    }
+
     // Query parent for player data to build name-to-id mapping
     function refreshPlayerMapping() {
         api.Panel.query(api.Panel.parentId, 'panel.invoke', ['playerData']).then(function (playerData) {
-            if (playerData && playerData.players) {
-                playerNameToId = {};
-                _.forEach(playerData.players, function (player) {
-                    if (player.name) {
-                        playerNameToId[player.name] = player.id;
-                    }
-                });
-            }
+            buildMappingFromPlayerData(playerData);
         });
     }
 
@@ -23,15 +26,12 @@
         setInterval(refreshPlayerMapping, 5000);
     });
 
-    // Handle player data updates from parent
+    // Handle player data updates from parent (format: { playerData: { names: [], ids: [] } })
     handlers.player_data = function (payload) {
-        if (payload && payload.players) {
-            playerNameToId = {};
-            _.forEach(payload.players, function (player) {
-                if (player.name) {
-                    playerNameToId[player.name] = player.id;
-                }
-            });
+        if (payload && payload.playerData) {
+            buildMappingFromPlayerData(payload.playerData);
+        } else {
+            buildMappingFromPlayerData(payload);
         }
     };
 
