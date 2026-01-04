@@ -56,4 +56,27 @@
         }
         return originalChatHandler(payload);
     };
+
+    // Intercept color_chat's update_player_color_index to translate keys to anonymized names
+    // This ensures the colored chat border works with anonymized player names
+    $(document).ready(function () {
+        // Wait a frame for color_chat to register its handler first
+        setTimeout(function () {
+            var colorChatHandler = handlers.update_player_color_index;
+            if (colorChatHandler) {
+                handlers.update_player_color_index = function (payload) {
+                    // Translate color map keys from original names to anonymized names
+                    if (!model.spectatorChat()) {
+                        var translatedMap = {};
+                        for (var originalName in payload) {
+                            var anonymizedName = getAnonymizedName(originalName);
+                            translatedMap[anonymizedName] = payload[originalName];
+                        }
+                        payload = translatedMap;
+                    }
+                    return colorChatHandler(payload);
+                };
+            }
+        }, 0);
+    });
 })();
