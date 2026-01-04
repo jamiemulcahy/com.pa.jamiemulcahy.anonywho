@@ -33,6 +33,7 @@
       "coui://ui/mods/com.pa.jamiemulcahy.anonywho/live_game_devmode.js"
     ],
     "live_game_chat": [
+      "coui://ui/mods/com.pa.jamiemulcahy.anonywho/shared.js",
       "coui://ui/mods/com.pa.jamiemulcahy.anonywho/live_game_chat.js"
     ],
     "live_game_unit_alert": [
