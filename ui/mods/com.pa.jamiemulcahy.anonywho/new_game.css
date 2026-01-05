@@ -11,3 +11,20 @@
 .slot-color-secondary {
     display: none !important;
 }
+
+/* Override Legion Expansion faction-revealing borders */
+/* Both legionslot (red) and mlaslot (cyan) should look identical */
+/* Using body prefix for higher specificity to beat Legion's !important */
+body .slot-player.legionslot,
+body .slot-player.legionslot.ready,
+body .slot-player.legionslot.loading,
+body .slot-player.mlaslot,
+body .slot-player.mlaslot.ready,
+body .slot-player.mlaslot.loading {
+    border-image: none !important;
+}
+
+/* Also hide the red border Legion adds to commander picker in legion slots */
+body .legionslot .slot-player-commander {
+    border: none !important;
+}
