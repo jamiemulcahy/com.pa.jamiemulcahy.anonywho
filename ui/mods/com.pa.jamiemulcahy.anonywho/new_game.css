@@ -11,3 +11,11 @@
 .slot-color-secondary {
     display: none !important;
 }
+
+/* Override Legion Expansion faction-revealing borders */
+/* Both legionslot (red) and mlaslot (cyan) should look identical */
+/* Using body prefix for higher specificity to beat Legion's !important */
+body .slot-player.legionslot,
+body .slot-player.mlaslot {
+    border-image: none !important;
+}
