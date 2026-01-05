@@ -13,15 +13,13 @@
 }
 
 /* Override ALL faction-revealing slot borders (Legion, Bugs, future mods) */
-/* Factions add classes like legionslot, mlaslot etc. with distinct border-image */
-/* [class] attribute selector adds specificity to beat .slot-player.factionslot rules */
-/* Specificity: .slot-player[class] = 0,0,2,0 (1 class + 1 attr) vs .slot-player.legionslot = 0,0,2,0 */
-/* Adding body gives us 0,0,2,1 which beats 0,0,2,0 */
-body .slot-player[class] {
+/* Factions use selectors like .slot-player.legionslot.ready (specificity 0,0,3,0) */
+/* Repeating .slot-player gives us 0,0,4,1 which beats any 3-class selector */
+body .slot-player.slot-player.slot-player.slot-player {
     border-image: none !important;
 }
 
 /* Also remove any borders on commander picker inside slots */
-body .slot-player[class] .slot-player-commander {
+body .slot-player.slot-player.slot-player.slot-player .slot-player-commander {
     border: none !important;
 }
