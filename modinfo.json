@@ -4,12 +4,12 @@
   "dependencies": [
     "com.pa.domdom.color_chat"
   ],
-  "version": "0.0.1",
+  "version": "0.1.0",
   "build": "124610",
-  "date": "2026-01-02",
-  "display_name": "Anonywho",
+  "date": "2026-01-05",
+  "display_name": "Anonymous Teams",
   "description": "A comprehensive anonymity mod for competitive and casual play that hides player identities behind anonymised aliases to prevent metagaming. Features include chat and system alert anonymization (disconnect/reconnect messages), devmode viewer anonymization, and hidden commander selection in the lobby. Works with all factions including Legion and Exiles. Based on and inspired by Masquerade (com.pa.n30n.masquerade) and Anonymous Army Mod (net.teamfruit.pa.anonymous-mod).",
-  "author": "jamiemulcahy",
+  "author": "Jammerz, N30N, Kamesuta",
   "forum": "https://github.com/jamiemulcahy/com.pa.jamiemulcahy.anonywho/discussions",
   "github": "https://github.com/jamiemulcahy/com.pa.jamiemulcahy.anonywho",
   "category": ["ui", "lobby", "gameplay"],
